@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Exercice4JavaScript</title>
+</head>
+
+<body style=background-color:#F1F1F1;>
+<!-- Il faut mettre un id dans le input, pour pouvoir récuperer les valeurs -->
+    <form>
+        Nom :<input type="text" value="" id="nom"> Prénom :<input type="text" value="" id="prenom"> Ville :<input
+            type="text" value="" id="ville">
+    </form>
+    <p>Appuyer "Valider" pour voir les valeurs introduites.</p>
+    <button onclick="myFunction()">Valider</button>
+<!-- Script pour recuperer les valeurs introuduites dans le formulaires -->
+    <script>
+        function myFunction() {
+            var nom = document.getElementById("nom").value;
+            var prenom = document.getElementById("prenom").value;
+            var ville = document.getElementById("ville").value;
+            alert("Nom : " + nom + "\nPrenom : " + prenom + "\nVille : " + ville);
+        } // fin de fonction  
+    </script>
+</body>
+
+</html>
