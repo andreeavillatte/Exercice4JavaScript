@@ -5,25 +5,33 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Exercice4JavaScript</title>
+    <title>Exercice5JavaScript</title>
 </head>
 
-<body style=background-color:#F1F1F1;>
-<!-- Il faut mettre un id dans le input, pour pouvoir récuperer les valeurs -->
-    <form>
-        Nom :<input type="text" value="" id="nom"> Prénom :<input type="text" value="" id="prenom"> Ville :<input
-            type="text" value="" id="ville">
-    </form>
-    <p>Appuyer "Valider" pour voir les valeurs introduites.</p>
-    <button onclick="myFunction()">Valider</button>
-<!-- Script pour recuperer les valeurs introuduites dans le formulaires -->
+<body class="bg-secondary">
+        <form class="center">
+            <!-- Premier nombre -->
+            <label class="d-block" for="nombre1">Inserer un premiere nombre à virgule.</label>
+            <input class="d-inline-block" id="nombre1" type="text" placeholder="1234.56789">
+            <!-- Deuxième nombre -->
+            <label class="d-block" for="nombre2">Inserer un deuxième nombre à virgule</label>
+            <input id="nombre2" type="text" placeholder="1234.56789">
+        </form>
+        <p>Appuyer "Valider" pour faire le calcul.</p>
+        <button onclick="myFunction()">Valider</button>
+    <!-- SCRIIIIIIIIIIIIIIIIIIIIPT -->
     <script>
         function myFunction() {
-            var nom = document.getElementById("nom").value;
-            var prenom = document.getElementById("prenom").value;
-            var ville = document.getElementById("ville").value;
-            alert("Nom : " + nom + "\nPrenom : " + prenom + "\nVille : " + ville);
-        } // fin de fonction  
+            // Récuperation des variables
+            var nombre1 = document.getElementById("nombre1").value;
+            var nombre2 = document.getElementById("nombre2").value;
+            // Trunquer seulement le premier nombre
+            nombre1Trunc = Math.trunc(nombre1);
+            // Multiplier les deux nombres
+            multiplication = nombre1Trunc * nombre2;
+
+            alert("1er nombre : " + nombre1Trunc + "\n2ème nombre: " + nombre2 + "\nMultiplication : " + multiplication);
+        } // fin de fonction 
     </script>
 </body>
 
